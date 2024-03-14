@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_checkout/core/utils/styles.dart';
+import 'package:payment_checkout/features/checkout/presentation/views/payment_details.dart';
 
 class CustomBottom extends StatelessWidget {
   const CustomBottom({
@@ -10,7 +11,15 @@ class CustomBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) {
+              return const PaymentDetailsView();
+            },
+          ),
+        );
+      },
       child: Container(
         width: double.infinity,
         height: 60,

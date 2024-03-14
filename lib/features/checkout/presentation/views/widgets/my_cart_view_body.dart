@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/order_info_item.dart';
 
@@ -19,7 +17,9 @@ class MyCartViewBody extends StatelessWidget {
           const SizedBox(
             height: 18,
           ),
-          Expanded(child: Image.asset('assets/images/basket.png')),
+          Expanded(
+            child: Image.asset('assets/images/basket.png'),
+          ),
           const SizedBox(
             height: 25,
           ),

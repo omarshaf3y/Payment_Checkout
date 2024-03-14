@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:payment_checkout/core/utils/styles.dart';
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/my_cart_view_body.dart';
 
 import 'widgets/custom_app_bar.dart';
