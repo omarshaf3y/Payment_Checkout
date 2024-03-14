@@ -45,10 +45,13 @@ class MyCartViewBody extends StatelessWidget {
             color: Color(0xffC7C7C7),
           ),
           const TotalPrice(title: 'Total', value: r'$50.97'),
-          const Padding(
-            padding: EdgeInsets.only(top: 10),
-            child: CustomBottom(),
-          )
+          const SizedBox(
+            height: 16,
+          ),
+          const CustomBottom(),
+          const SizedBox(
+            height: 12,
+          ),
         ],
       ),
     );
