@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:payment_checkout/core/utils/styles.dart';
+
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/order_info_item.dart';
 
+import 'custom_bottom.dart';
 import 'total_price.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -44,18 +45,9 @@ class MyCartViewBody extends StatelessWidget {
             color: Color(0xffC7C7C7),
           ),
           const TotalPrice(title: 'Total', value: r'$50.97'),
-          Container(
-            width: 350,
-            height: 73,
-            decoration: ShapeDecoration(
-              color: const Color(0xff34A853),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
-            child: Center(
-              child: Text('Complete Payment', style: Styles.style22),
-            ),
+          const Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: CustomBottom(),
           )
         ],
       ),
