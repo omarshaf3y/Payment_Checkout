@@ -50,7 +50,9 @@ class MyCartViewBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const CustomBottom(),
+          const CustomBottom(
+            text: 'Payment Complete',
+          ),
           const SizedBox(
             height: 12,
           ),

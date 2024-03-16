@@ -6,8 +6,10 @@ class CustomBottom extends StatelessWidget {
   const CustomBottom({
     super.key,
     this.onTap,
+    required this.text,
   });
   final void Function()? onTap;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -31,7 +33,7 @@ class CustomBottom extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Complete Payment',
+            text,
             style: Styles.style22,
           ),
         ),
