@@ -4,10 +4,10 @@ import 'package:payment_checkout/features/checkout/presentation/views/payment_de
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    Key? key,
+    super.key,
     this.onTap,
     required this.text,
-  }) : super(key: key);
+  });
 
   final void Function()? onTap;
   final String text;
