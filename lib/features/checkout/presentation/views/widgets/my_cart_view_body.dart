@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:payment_checkout/features/checkout/presentation/views/payment_details.dart';
 
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/order_info_item.dart';
+import 'package:payment_checkout/features/checkout/presentation/views/widgets/payment_methods_list_view.dart';
 
 import 'custom_bottom.dart';
 import 'total_price.dart';
@@ -53,19 +54,41 @@ class MyCartViewBody extends StatelessWidget {
           ),
           CustomButton(
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
+              showModalBottomSheet(
+                  context: context,
                   builder: (context) {
-                    return const PaymentDetailsView();
-                  },
-                ),
-              );
+                    return const PaymentMethodsButtonSheet();
+                  });
             },
             text: 'Payment Complete',
           ),
           const SizedBox(
             height: 12,
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class PaymentMethodsButtonSheet extends StatelessWidget {
+  const PaymentMethodsButtonSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.all(16),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            height: 16,
+          ),
+          PaymentMethodsListView(),
+          SizedBox(
+            height: 32,
+          ),
+          CustomButton(text: 'Continue'),
         ],
       ),
     );
