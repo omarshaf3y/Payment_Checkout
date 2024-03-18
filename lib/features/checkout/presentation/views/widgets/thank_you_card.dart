@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:payment_checkout/core/utils/styles.dart';
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/card_info_widget.dart';
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/payment_item_info.dart';
@@ -14,7 +15,7 @@ class ThankYouCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: ShapeDecoration(
-        color: const Color(0xFFd9d9d9),
+        color: const Color(0xFFEDEDED),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
@@ -67,6 +68,41 @@ class ThankYouCard extends StatelessWidget {
               height: 30,
             ),
             const CardInfoWidget(),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Icon(
+                  FontAwesomeIcons.barcode,
+                  size: 64,
+                ),
+                Container(
+                  width: 113,
+                  height: 58,
+                  decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      side: const BorderSide(
+                        width: 1.50,
+                        color: Color(0xff34A853),
+                      ),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'PAID',
+                      textAlign: TextAlign.center,
+                      style: Styles.style24.copyWith(
+                        color: const Color(0xff34A853),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: ((MediaQuery.sizeOf(context).height * .2 + 20) / 2) - 29,
+            )
           ],
         ),
       ),
