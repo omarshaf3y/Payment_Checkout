@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:payment_checkout/features/checkout/presentation/views/payment_details.dart';
 
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/order_info_item.dart';
 import 'package:payment_checkout/features/checkout/presentation/views/widgets/payment_methods_list_view.dart';
